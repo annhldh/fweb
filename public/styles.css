@@ -1,0 +1,81 @@
+body{
+    background-image: url(https://static.vietcv.io/top-page/bg-top-1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+ 
+}
+
+h1
+{
+    color: violet;
+    border: 2px solid snow;
+    font-size: 25px;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#main
+{
+    
+    padding:0 50px 0 50px;
+
+}
+table{
+    width: 60%;
+}
+th
+{
+    text-align: left;
+    font-family: 'Montserrat';
+}
+td
+{
+    width: auto;
+    font-family: 'Montserrat';
+}
+
+h3{
+    border-left-style:solid;
+    padding-left: 20px;
+    background-color: rgba(70, 202, 195,0.5);
+    background-size:cover;
+}
+li{
+    font-family: 'Montserrat';
+    margin-bottom: 10px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+.left-content {
+    flex: 1;
+    margin-right: 20px;
+}
+.right-content {
+    text-align: center;
+
+}
+
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.image-gallery img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px; /* Thay đổi giá trị để điều chỉnh độ bo góc */
+}
+
+.right-content img {
+    width: 70%;
+    max-width: 200px;
+    border-radius: 15px; /* Thay đổi giá trị để điều chỉnh độ bo góc */
+    align-items: center;
+}

@@ -1,0 +1,25 @@
+Tên: ${name}, Giới tính: ${gt}
+Tình trạng: ${tthn}
+LinkFB: ${link}
+Câu hỏi: ${question}
+ ,_____________________________________ 
+Tên: ${name}, Giới tính: ${gt}
+Tình trạng: ${tthn}
+LinkFB: ${link}
+Câu hỏi: ${question}
+ ,_____________________________________ 
+Tên: ${name}, Giới tính: ${gt}
+Tình trạng: ${tthn}
+LinkFB: ${link}
+Câu hỏi: ${question}
+ ,_____________________________________ 
+Tên: ${name}, Giới tính: ${gt}
+Tình trạng: ${tthn}
+LinkFB: ${link}
+Câu hỏi: ${question}
+ ,_____________________________________ 
+Tên: ${name}, Giới tính: ${gt}
+Tình trạng: ${tthn}
+LinkFB: ${link}
+Câu hỏi: ${question}
+ ,_____________________________________ 
