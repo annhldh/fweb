@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,86 +16,99 @@
 
 <h1>Giới thiệu bản thân</h1>
 <h3>Thông tin cá nhân</h3>
-<div class="container">
-    <div class="left-content">
-        <ul>
-            <li>Họ và tên: Lê Đức Hoàng Anh</li>
-            <li>Năm sinh: 2005</li>
-            <li>Quê Quán: Quế Võ, Bắc Ninh</li>
-            <li>Sinh viên năm nhấ-hai Đại học Công nghệ -DHQGHN </li>
-        </ul>
-       
-    </div>
-    <div class="right-content">
-        <div class="image-gallery">
-            <img src="https://scontent.fhph1-2.fna.fbcdn.net/v/t39.30808-1/449747449_1010433453996512_1210799375330267285_n.jpg?stp=dst-jpg_p200x200&_nc_cat=106&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHAc2fMxNuBfUeLwnlNTA5oDTzn8Jbkx8YNPOfwluTHxn4WQdiVc58VAWe10H51I7kiUzyjeRHJRulNWgrtdPua&_nc_ohc=Oe3ZB4REQL8Q7kNvgHZh_X-&_nc_ht=scontent.fhph1-2.fna&oh=00_AYBDGnGhXALKZVzmSByxtbq4tB7XwXNMqSW42ak8GguwXg&oe=66C77849" alt="Ảnh chính">
-            <img src="https://downloadlogomienphi.com/sites/default/files/logos/download-logo-vector-dai-hoc-cong-nghe-mien-phi.jpg" alt="Ảnh 2">
+<div class="sidebar">
+    <ul>
+        <li><a href="#" onclick="showSection('about')">Giới thiệu</a></li>
+        <li><a href="#" onclick="showSection('projects')">Projects đã làm</a></li>
+    </ul>
+
+</div>
+<div id="about" class="section">
+    <div class="container">
+        <div class="left-content">
+            <ul>
+                <li>Họ và tên: Lê Đức Hoàng Anh</li>
+                <li>Năm sinh: 2005</li>
+                <li>Quê Quán: Quế Võ, Bắc Ninh</li>
+                <li>Sinh viên năm nhấ-hai Đại học Công nghệ -DHQGHN </li>
+            </ul>
+        
+        </div>
+        <div class="right-content">
+            <div class="image-gallery">
+                <img src="https://scontent.fhph1-2.fna.fbcdn.net/v/t39.30808-1/449747449_1010433453996512_1210799375330267285_n.jpg?stp=dst-jpg_p200x200&_nc_cat=106&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHAc2fMxNuBfUeLwnlNTA5oDTzn8Jbkx8YNPOfwluTHxn4WQdiVc58VAWe10H51I7kiUzyjeRHJRulNWgrtdPua&_nc_ohc=Oe3ZB4REQL8Q7kNvgHZh_X-&_nc_ht=scontent.fhph1-2.fna&oh=00_AYBDGnGhXALKZVzmSByxtbq4tB7XwXNMqSW42ak8GguwXg&oe=66C77849" alt="Ảnh chính">
+                <img src="https://downloadlogomienphi.com/sites/default/files/logos/download-logo-vector-dai-hoc-cong-nghe-mien-phi.jpg" alt="Ảnh 2">
+            </div>
         </div>
     </div>
-</div>
 
-<h3>Thành tích nổi bật</h3>
-<p>Không có</p>
-<h3>Sơ lược </h3>
-<div id="main">
-    <table>
-        <tr>
-            <th>Tính cách</th>
-            <th>Sở thích</th>
-            <th>Mục tiêu</th>
-        </tr>
-        <tr>
+    <h3>Thành tích nổi bật</h3>
+    <p>Không có</p>
+    <h3>Sơ lược </h3>
+    <div id="main">
+        <table>
+            <tr>
+                <th>Tính cách</th>
+                <th>Sở thích</th>
+                <th>Mục tiêu</th>
+            </tr>
+            <tr>
 
-            <td>Hướng nội</td>
-            <td>Chơi game</td>
-            <td>Tốt nghiệp Đại học</td>
-        
-        </tr>
-        <tr>
-            <td>Dễ gần</td>
-            <td>Ngủ ~</td>
-            <td>Công việc tốt</td>
-        </tr>
-        <tr>
-            <td>...</td>
-            <td>Nấu ăn</td>
-            <td>Vợ đẹp con khôn</td>
-        </tr>
-    </table>
+                <td>Hướng nội</td>
+                <td>Chơi game</td>
+                <td>Tốt nghiệp Đại học</td>
+            
+            </tr>
+            <tr>
+                <td>Dễ gần</td>
+                <td>Ngủ ~</td>
+                <td>Công việc tốt</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>Nấu ăn</td>
+                <td>Vợ đẹp con khôn</td>
+            </tr>
+        </table>
+    </div>
+    <h3>Bạn có muốn hỏi gì mình ko?</h3>
+    <form action="/submit" method="POST">
+        <div>
+            <label for="name">Điền tên bạn vào đây</label>
+            <input type="text" id="name" name="name" placeholder="Ko bắt buộc"/>
+        </div>
+        <div>
+            <label for="gt">Giới tính</label>
+            <select id="gt" name="gt" required>
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+                <option value="Khác">Khác~</option>
+            </select>
+        </div>
+        <div>
+            <label for="tthn">Tình trạng hôn nhân</label>
+            <input type="radio" name="tthn" value="Độc thân"/>Độc thân  
+            <input type="radio" name="tthn" value="Có ny"/>Có ny
+            <input type="radio" name="tthn" value="Đã kết hôn"/>Đã kết hôn
+            <input type="radio" name="tthn" value="Bỏ qua"/> Bỏ qua
+        </div>
+        <div>
+            <label for="link">Link Facebook</label>
+            <input type="text" name="link" placeholder="Ko bắt buộc"/>
+        </div>
+        <div>
+            <label for="question"></label>
+            <textarea onkeyup="textAreaAdjust(this)" id="question" name="question"  placeholder="Nhập câu hỏi"></textarea>
+        </div>
+        <div class="centerObject">
+        <button type="submit">Gửi câu hỏi</button>
+        </div>
+    </form>
 </div>
-<h3>Bạn có muốn hỏi gì mình ko?</h3>
-<form action="/submit" method="POST">
-    <div>
-        <label for="name">Điền tên bạn vào đây</label>
-        <input type="text" id="name" name="name" placeholder="Ko bắt buộc"/>
-    </div>
-    <div>
-        <label for="gt">Giới tính</label>
-        <select id="gt" name="gt" required>
-            <option value="Nam">Nam</option>
-            <option value="Nữ">Nữ</option>
-            <option value="Khác">Khác~</option>
-        </select>
-    </div>
-    <div>
-        <label for="tthn">Tình trạng hôn nhân</label>
-        <input type="radio" name="tthn" value="Độc thân"/>Độc thân  
-        <input type="radio" name="tthn" value="Có ny"/>Có ny
-        <input type="radio" name="tthn" value="Đã kết hôn"/>Đã kết hôn
-        <input type="radio" name="tthn" value="Bỏ qua"/> Bỏ qua
-    </div>
-    <div>
-        <label for="link">Link Facebook</label>
-        <input type="text" name="link" placeholder="Ko bắt buộc"/>
-    </div>
-    <div>
-        <label for="question"></label>
-        <textarea onkeyup="textAreaAdjust(this)" id="question" name="question"  placeholder="Nhập câu hỏi"></textarea>
-    </div>
-    <div class="centerObject">
-    <button type="submit">Gửi câu hỏi</button>
-    </div>
-</form>
+<div id="projects" class="section" style="display: none;">
+    <h1>Projects đã làm</h1>
+    <p>Chi tiết về các dự án bạn đã thực hiện...</p>
+</div>
 
 <script>
     function adjustTextareaHeight(textarea) {
@@ -114,6 +128,15 @@
     });
 </script>
 
+<script>
+    function showSection(sectionId) {
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
 
 <footer>
 <h3>Mạng xã hội</h3>
