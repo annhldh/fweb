@@ -163,7 +163,7 @@ textarea {
     color: #000;
 }
 .sidebar.show {
-    transform: translateX(-20); /* Hiện sidebar */
+    transform: translateX(0); /* Hiện sidebar */
 }
 
 
