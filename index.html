@@ -14,16 +14,18 @@
 </head>
 <body>
 
-<h1>Giới thiệu bản thân</h1>
-<h3>Thông tin cá nhân</h3>
+
 <div class="sidebar">
     <ul>
         <li><a href="#" onclick="showSection('about')">Giới thiệu</a></li>
         <li><a href="#" onclick="showSection('projects')">Projects đã làm</a></li>
+        <li><a href="#" onclick="showSection('call')">Liên hệ</a> </li>
     </ul>
 
 </div>
-<div id="about" class="section">
+<div id="about" class="section" style="display:block;">
+    <h1>Giới thiệu bản thân</h1>
+    <h3>Thông tin cá nhân</h3>
     <div class="container">
         <div class="left-content">
             <ul>
@@ -107,7 +109,20 @@
 </div>
 <div id="projects" class="section" style="display: none;">
     <h1>Projects đã làm</h1>
-    <p>Chi tiết về các dự án bạn đã thực hiện...</p>
+    <a href="https://github.com/annhldh/JumpKing">
+         <img src="https://github.com/annhldh/JumpKing/blob/main/Project2/img/demo_game/demo_1.png">
+     </a>
+</div>
+<div id="call" class="section" style="display: none;">
+    <footer>
+        <h3>Mạng xã hội</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100050895993355">Facebook</a></li>
+                <li><a href="https://www.youtube.com/channel/UCMr8Uljs-SdHCmqW5A9Emrg">Youtube</a></li>
+        
+            </ul>
+        </footer>
+        
 </div>
 
 <script>
@@ -138,14 +153,6 @@
     }
 </script>
 
-<footer>
-<h3>Mạng xã hội</h3>
-    <ul>
-        <li><a href="https://www.facebook.com/profile.php?id=100050895993355">Facebook</a></li>
-        <li><a href="https://www.youtube.com/channel/UCMr8Uljs-SdHCmqW5A9Emrg">Youtube</a></li>
-
-    </ul>
-</footer>
 
 
 </body>
