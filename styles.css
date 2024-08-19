@@ -128,3 +128,36 @@ textarea {
     min-height: 60px; /* Chiều cao tối thiểu */
     
 }
+
+.sidebar {
+    position: fixed;
+
+    width: 150px;
+    height: 500px;
+    background-color: #945353;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.section {
+    display:none;
+}
+
+.section.active {
+    display: block;
+}
