@@ -15,9 +15,9 @@ app.use(express.static('public'));
 
 // Xử lý dữ liệu gửi đến từ biểu mẫu
 app.post('/submit', (req, res) => {
-    const { name, link, tthn, gt, question } = req.body;
+    const { name, link, tthn, gt, ques } = req.body;
 
-    const data = 'Tên: ${name}, Giới tính: ${gt}\nTình trạng: ${tthn}\nLinkFB: ${link}\nCâu hỏi: ${question}\n_____________________________________ \n';
+    const data = 'Tên: ${name}, Giới tính: ${gt}\nTình trạng: ${tthn}\nLinkFB: ${link}\nCâu hỏi: ${ques}\n_____________________________________ \n';
 
     // Lưu dữ liệu vào tệp userdata.txt
     fs.appendFile(path.join(__dirname, 'userdata.txt'), data, (err) => {
