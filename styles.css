@@ -7,8 +7,8 @@ body{
 
 h1
 {
-    color: violet;
-    border: 2px solid snow;
+    color: rgb(61, 46, 61);
+  
     font-size: 25px;
     font-family:'Courier New', Courier, monospace;
     text-align: center;
@@ -35,10 +35,12 @@ td
 }
 
 h3{
+
     border-left-style:solid;
     padding-left: 20px;
     background-color: rgba(70, 202, 195,0.5);
     background-size:cover;
+    margin-left: 30px;
 }
 li{
     font-family: 'Montserrat';
@@ -78,4 +80,51 @@ li{
     max-width: 200px;
     border-radius: 15px; /* Thay đổi giá trị để điều chỉnh độ bo góc */
     align-items: center;
+}
+
+form
+{
+
+    border-radius: 25px;
+    resize: vertical;
+    box-sizing: border-box;
+    
+}
+input,select,button
+{
+    border-radius: 5px;
+}
+button
+{
+    padding: 3px 7px 3px 7px ;
+    background-color: blanchedalmond;
+}
+.centerObject
+{
+    text-align:center ;
+}
+
+p{
+    margin-left: 50px;
+}
+
+form {
+    width: 60%;
+    gap: 15px;
+    margin:0 10% 0 10%;
+    padding: 20px 20px 20px 20px;
+    border: solid ;
+    background-color: rgba(34, 130, 60,0.1);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    resize: none; /* Tắt khả năng thay đổi kích thước thủ công */
+    overflow: hidden; /* Ẩn thanh cuộn */
+    box-sizing: border-box;
+    min-height: 60px; /* Chiều cao tối thiểu */
+    
 }
