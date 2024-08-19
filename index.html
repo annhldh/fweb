@@ -63,14 +63,14 @@
     </table>
 </div>
 <h3>Bạn có muốn hỏi gì mình ko?</h3>
-<form action="/submit" method="POST">
+<form name="contact" method="POST" data-netlify="true">
     <div>
         <label for="name">Điền tên bạn vào đây</label>
         <input type="text" id="name" name="name" placeholder="Ko bắt buộc"/>
     </div>
     <div>
         <label for="gt">Giới tính</label>
-        <select id="gt" name="gt" required>
+        <select id="gt" name="gender" required>
             <option value="Nam">Nam</option>
             <option value="Nữ">Nữ</option>
             <option value="Khác">Khác~</option>
@@ -78,10 +78,10 @@
     </div>
     <div>
         <label for="tthn">Tình trạng hôn nhân</label>
-        <input type="radio" name="tthn" value="Độc thân"/>Độc thân  
-        <input type="radio" name="tthn" value="Có ny"/>Có ny
-        <input type="radio" name="tthn" value="Đã kết hôn"/>Đã kết hôn
-        <input type="radio" name="tthn" value="Bỏ qua"/> Bỏ qua
+        <input type="radio" name="maritalStatus" value="Độc thân"/>Độc thân  
+        <input type="radio" name="maritalStatus" value="Có ny"/>Có ny
+        <input type="radio" name="maritalStatus" value="Đã kết hôn"/>Đã kết hôn
+        <input type="radio" name="maritalStatus" value="Bỏ qua"/> Bỏ qua
     </div>
     <div>
         <label for="link">Link Facebook</label>
@@ -93,6 +93,7 @@
     </div>
     <button type="submit">Gửi câu hỏi</button>
 </form>
+
 
 <footer>
 <h3>Mạng xã hội</h3>
