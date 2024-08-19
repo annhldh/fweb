@@ -137,6 +137,8 @@ textarea {
     background-color: #945353;
     padding: 10px;
     z-index: 1000;
+    border-top-right-radius: 20px; /* Bo góc trên bên phải */
+    border-bottom-right-radius: 20px; /* Bo góc dưới bên phải */
 }
 
 .sidebar ul {
@@ -145,9 +147,14 @@ textarea {
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444; /* Thêm viền phía dưới */
+    padding-bottom: 10px; /* Tạo khoảng cách giữa nội dung và viền */
 }
 
+.sidebar ul li:last-child {
+    border-bottom: none; /* Loại bỏ viền dưới cùng của item cuối */
+}
 .sidebar ul li a {
     text-decoration: none;
     color: #000;
