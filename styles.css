@@ -169,6 +169,7 @@ textarea {
 
 .section {
     display:none;
+    padding-left: 120px;
 }
 
 .section.active {
