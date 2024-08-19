@@ -23,7 +23,7 @@ h1
 table{
     width: 60%;
 }
-th
+th,label
 {
     text-align: left;
     font-family: 'Montserrat';
