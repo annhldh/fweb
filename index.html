@@ -52,7 +52,7 @@
             <tr>
                 <th><img src="img/chara.png" class="image-up" > </th>
                 <th><img src="img/hobby.png" class="image-up" > </th>
-                <th><img src="img/aim.png"   class="image-up" > </th>
+                <th><img src="img/aim.png"   class="image-up" > </
             </tr>
             <tr>
                 <th>Tính cách</th>
@@ -78,7 +78,7 @@
             </tr>
         </table>
     </div>
-    <h3>Bạn có muốn hỏi gì mình ko?</h3>
+    <h3>Đặt câu hỏi</h3>
     <form action="https://formspree.io/f/xrbzakdv" method="POST">
 
         <div>
@@ -182,22 +182,24 @@ document.addEventListener('mousemove', (event) => {
 </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const lazyImages = document.querySelectorAll('.image-up');
+   document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll('.image-up');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Ngừng quan sát sau khi ảnh đã hiển thị
-                }
-            });
-        });
-
-        lazyImages.forEach(image => {
-            observer.observe(image);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible'); // Ẩn ảnh khi rời khỏi vùng hiển thị
+            }
         });
     });
+
+    lazyImages.forEach(image => {
+        observer.observe(image);
+    });
+});
+
 </script>
 
 
