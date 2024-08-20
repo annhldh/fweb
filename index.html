@@ -182,23 +182,66 @@ document.addEventListener('mousemove', (event) => {
 
 </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const lazyImages = document.querySelectorAll('.lazy-image');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+Cảm ơn bạn đã chỉ ra vấn đề. Có thể do sự kiện DOMContentLoaded chưa đủ để kích hoạt IntersectionObserver khi trang vừa tải xong. Để khắc phục, chúng ta có thể thực hiện kiểm tra khi trang vừa tải, hoặc đảm bảo rằng ảnh đang được kiểm tra ngay cả khi chúng đã có trong vùng nhìn thấy (viewport) ngay từ đầu.
+
+Dưới đây là phiên bản cập nhật của đoạn mã:
+
+HTML & CSS:
+html
+Sao chép mã
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .image-up-container {
+            position: relative;
+            overflow: hidden;
+            min-height: 200px; /* Đặt chiều cao tối thiểu cho container */
+        }
+
+        .image-up {
+            opacity: 0;
+            transform: translateY(50px); /* Đẩy ảnh xuống dưới 50px */
+            transition: opacity 1s ease, transform 1s ease; /* Hiệu ứng mờ dần và di chuyển */
+        }
+
+        .image-up.visible {
+            opacity: 1;
+            transform: translateY(0); /* Di chuyển ảnh về vị trí gốc */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-up-container">
+        <img src="image1.jpg" alt="Description 1" class="image-up">
+    </div>
+    <div class="image-up-container">
+        <img src="image2.jpg" alt="Description 2" class="image-up">
+    </div>
+    <div class="image-up-container">
+        <img src="image3.jpg" alt="Description 3" class="image-up">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lazyImages = document.querySelectorAll('.image-up');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Ngừng quan sát sau khi ảnh đã hiển thị
+                    }
+                });
+            });
+
+            lazyImages.forEach(image => {
+                observer.observe(image);
             });
         });
-
-        lazyImages.forEach(image => {
-            observer.observe(image);
-        });
-    });
-</script>
+    </script>
 
 
 </body>
