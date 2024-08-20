@@ -1,209 +1,205 @@
-body{
-    background-image: url(https://static.vietcv.io/top-page/bg-top-1.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
- 
-}
 
-h1
-{
-    color: rgb(61, 46, 61);
-  
-    font-size: 25px;
-    font-family:'Courier New', Courier, monospace;
-    text-align: center;
-}
-
-#main
-{
-    
-    padding:0 50px 0 50px;
-
-}
-table{
-    width: 60%;
-}
-th,label
-{
-    text-align: left;
-    font-family: 'Montserrat';
-}
-td
-{
-    width: auto;
-    font-family: 'Montserrat';
-}
-
-h3{
-
-    border-left-style:solid;
-    padding-left: 20px;
-    background-color: rgba(70, 202, 195,0.5);
-    background-size:cover;
-    margin-left: 30px;
-}
-li{
-    font-family: 'Montserrat';
-    margin-bottom: 10px;
-}
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-}
-.left-content {
-    flex: 1;
-    margin-right: 20px;
-}
-.right-content {
-    text-align: center;
-
-}
-
-.image-gallery {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.image-gallery img {
-    width: 100px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 15px; /* Thay đổi giá trị để điều chỉnh độ bo góc */
-}
-
-.right-content img {
-    width: 70%;
-    max-width: 200px;
-    border-radius: 15px; /* Thay đổi giá trị để điều chỉnh độ bo góc */
-    align-items: center;
-}
-
-form
-{
-
-    border-radius: 25px;
-    resize: vertical;
-    box-sizing: border-box;
-    
-}
-input,select,button
-{
-    border-radius: 5px;
-}
-button
-{
-    padding: 3px 7px 3px 7px ;
-    background-color: blanchedalmond;
-}
-.centerObject
-{
-    text-align:center ;
-}
-
-p{
-    margin-left: 50px;
-}
-
-form {
-    width: 60%;
-    gap: 25px;
-    margin:0 10% 0 10%;
-    padding: 20px 20px 20px 20px;
-    border: solid ;
-    background-color: rgba(34, 130, 60,0.1);
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-textarea {
-    width: 100%;
-    padding: 10px;
-    resize: none; /* Tắt khả năng thay đổi kích thước thủ công */
-    overflow: hidden; /* Ẩn thanh cuộn */
-    box-sizing: border-box;
-    min-height: 60px; /* Chiều cao tối thiểu */
-    
-}
-
-.sidebar {
-    position: fixed;
-
-    width: 150px;
-    height: 500px;
-    background-color: #945353;
-    padding: 10px;
-    z-index: 1000;
-    border-top-right-radius: 20px; /* Bo góc trên bên phải */
-    border-bottom-right-radius: 20px; /* Bo góc dưới bên phải */
-    overflow-x: hidden;
-    transform: translateX(-160px); /* Ẩn sidebar */
-    transition: transform 0.3s ease;
-}   
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #444; /* Thêm viền phía dưới */
-    padding-bottom: 10px; /* Tạo khoảng cách giữa nội dung và viền */
-}
-
-.sidebar ul li:last-child {
-    border-bottom: none; /* Loại bỏ viền dưới cùng của item cuối */
-}
-.sidebar ul li a {
-    text-decoration: none;
-    color: #000;
-}
-.sidebar.show {
-    transform: translateX(0); /* Hiện sidebar */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&display=swap" rel="stylesheet">
+    <title>Profile</title>
 
 
-.section {
-    display:none;
-    padding-left: 120px;
-}
-
-.section.active {
-    display: block;
-}
+</head>
+<body>
 
 
+<div id="sidebar" class="sidebar">
+    <ul>
+        <li><a href="#" onclick="showSection('about')">Giới thiệu</a></li>
+        <li><a href="#" onclick="showSection('projects')">Projects đã làm</a></li>
+        <li><a href="#" onclick="showSection('call')">Liên hệ</a> </li>
+    </ul>
 
-.image-container {
-    position: relative;
-    display: inline-block;
-}
+</div>
+<div id="about" class="section" style="display: block;" >
+    <h1>Giới thiệu bản thân</h1>
+   
+    <div class="container">
+        <div class="left-content">
+            <ul>
+                <li>Lê Đức Hoàng Anh</li>
+                <li>Năm sinh: 2005</li>
+               
+                <li>Sinh viên năm nhấ-hai Đại học Công nghệ -DHQGHN </li>
+            </ul>
+        
+        </div>
+        <div class="right-content">
+            <div class="image-gallery">
+                <img src="https://scontent.fhph1-2.fna.fbcdn.net/v/t39.30808-1/449747449_1010433453996512_1210799375330267285_n.jpg?stp=dst-jpg_p200x200&_nc_cat=106&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHAc2fMxNuBfUeLwnlNTA5oDTzn8Jbkx8YNPOfwluTHxn4WQdiVc58VAWe10H51I7kiUzyjeRHJRulNWgrtdPua&_nc_ohc=Oe3ZB4REQL8Q7kNvgHZh_X-&_nc_ht=scontent.fhph1-2.fna&oh=00_AYBDGnGhXALKZVzmSByxtbq4tB7XwXNMqSW42ak8GguwXg&oe=66C77849" alt="Ảnh chính">
+                <img src="https://downloadlogomienphi.com/sites/default/files/logos/download-logo-vector-dai-hoc-cong-nghe-mien-phi.jpg" alt="Ảnh 2">
+            </div>
+        </div>
+    </div>
 
-.image-container img {
-    display: block;
-    width: auto;
+    <h3>Thành tích nổi bật</h3>
+    <p>Không có</p>
+    <h3>Sơ lược </h3>
+    <div id="main">
+        <table>
+            <tr>
+                <th><img src="https://png.pngtree.com/png-vector/20190616/ourlarge/pngtree-characterfeatureshumanmodelperson--business-flat-line-fi-png-image_1487088.jpg" class="image-up" > </th>
+                <th><img src="https://png.pngtree.com/png-vector/20190616/ourlarge/pngtree-characterfeatureshumanmodelperson--business-flat-line-fi-png-image_1487088.jpg" class="image-up" > </th>
+                <th><img src="https://png.pngtree.com/png-vector/20190616/ourlarge/pngtree-characterfeatureshumanmodelperson--business-flat-line-fi-png-image_1487088.jpg" class="image-up" > </th>
 
-}
+            </tr>
+            <tr>
+                <th>Tính cách</th>
+                <th>Sở thích</th>
+                <th>Mục tiêu</th>
+            </tr>
+            <tr>
 
-.image-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-    transition: opacity 0.5s ease;
-}
+                <td>Hướng nội</td>
+                <td>Chơi game</td>
+                <td>Tốt nghiệp Đại học</td>
+            
+            </tr>
+            <tr>
+                <td>Dễ gần</td>
+                <td>Ngủ ~</td>
+                <td>Công việc tốt</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>Nấu ăn</td>
+                <td>Vợ đẹp con khôn</td>
+            </tr>
+        </table>
+    </div>
+    <h3>Bạn có muốn hỏi gì mình ko?</h3>
+    <form action="https://formspree.io/f/xrbzakdv" method="POST">
 
-.image-container:hover img {
-    transform: scale(1.1); /* Phóng to ảnh */
-}
+        <div>
+            <label for="name">Điền tên bạn vào đây</label>
+            <input type="text" id="name" name="name" placeholder="Ko bắt buộc"/>
+        </div>
+        <div>
+            <label for="gt">Giới tính</label>
+            <select id="gt" name="gt" required>
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+                <option value="Khác">Khác~</option>
+            </select>
+        </div>
+        <div>
+            <label for="tthn">Tình trạng hôn nhân</label>
+            <input type="radio" name="tthn" value="Độc thân"/>Độc thân  
+            <input type="radio" name="tthn" value="Có ny"/>Có ny
+            <input type="radio" name="tthn" value="Đã kết hôn"/>Đã kết hôn
+            <input type="radio" name="tthn" value="Bỏ qua"/> Bỏ qua
+        </div>
+        <div>
+            <label for="link">Link Facebook</label>
+            <input type="text" name="link" placeholder="Ko bắt buộc"/>
+        </div>
+        <div>
+            <label for="question"></label>
+            <textarea onkeyup="textAreaAdjust(this)" id="question" name="question"  placeholder="Nhập câu hỏi"></textarea>
+        </div>
+        <div class="centerObject">
+        <button type="submit">Gửi câu hỏi</button>
+        </div>
+    </form>
+</div>
+<div id="projects" class="section" style="display: none;">
+    <h1>Projects đã làm</h1>
 
-.image-container:hover::after {
-    opacity: 0; /* Bỏ lớp phủ */
-}
+    <a href="https://github.com/annhldh/JumpKing">
+        <div class="image-container">
+         <img src="https://www.xboxtavern.com/wp-content/uploads/2020/06/Jump-King-main.jpg">
+         </div>
+     </a>
+
+</div>
+<div id="call" class="section" style="display: none;">
+    <footer>
+        <h3>Mạng xã hội</h3>
+            
+                <a href="https://www.facebook.com/profile.php?id=100050895993355">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Facebook_logo_36x36.svg/2048px-Facebook_logo_36x36.svg.png"  style=" height: 150px; border-radius: 30px; margin: 30px">
+                </a>
+                <a href="https://www.youtube.com/channel/UCMr8Uljs-SdHCmqW5A9Emrg">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Symbol.png" style=" height: 150px; border-radius: 30px; margin: 30px">
+                </a>
+        
+            
+        </footer>
+        
+</div>
+
+<script>
+    function adjustTextareaHeight(textarea) {
+        textarea.style.height = 'auto'; // Đặt chiều cao về auto để tính toán lại
+        textarea.style.height = (textarea.scrollHeight) + 'px'; // Điều chỉnh chiều cao dựa trên nội dung
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const textarea = document.getElementById('question');
+
+        textarea.addEventListener('input', function() {
+            adjustTextareaHeight(this);
+        });
+
+        // Điều chỉnh chiều cao ngay khi tải trang, nếu có nội dung
+        adjustTextareaHeight(textarea);
+    });
+</script>
+
+<script>
+    function showSection(sectionId) {
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
+
+<script>
+    const sidebar = document.getElementById('sidebar');
+
+document.addEventListener('mousemove', (event) => {
+    // Kiểm tra nếu con trỏ chuột gần lề trái (trong khoảng 50px)
+    if (event.clientX < 150) {
+        sidebar.classList.add('show');
+    } else {
+        sidebar.classList.remove('show');
+    }
+});
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = document.querySelectorAll('.lazy-image');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        lazyImages.forEach(image => {
+            observer.observe(image);
+        });
+    });
+</script>
+
+
+</body>
+</html>
