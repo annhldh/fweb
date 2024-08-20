@@ -185,7 +185,7 @@ textarea {
 
 .image-container img {
     display: block;
-    width: 600px;
+    width: auto;
 
 }
 
