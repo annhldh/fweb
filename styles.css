@@ -149,7 +149,7 @@ textarea {
     border-top-right-radius: 20px; /* Bo góc trên bên phải */
     border-bottom-right-radius: 20px; /* Bo góc dưới bên phải */
     overflow-x: hidden;
-    transform: translateX(0px); /* Ẩn sidebar */
+    transform: translateX(-160px); /* Ẩn sidebar */
     transition: transform 0.3s ease;
 }   
 
