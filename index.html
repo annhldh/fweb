@@ -23,15 +23,15 @@
     </ul>
 
 </div>
-<div id="about" class="section" style="display:block;">
+<div id="about" class="section" style="display: block;" >
     <h1>Giới thiệu bản thân</h1>
-    <h3>Thông tin cá nhân</h3>
+   
     <div class="container">
         <div class="left-content">
             <ul>
-                <li>Họ và tên: Lê Đức Hoàng Anh</li>
+                <li>Lê Đức Hoàng Anh</li>
                 <li>Năm sinh: 2005</li>
-                <li>Quê Quán: Quế Võ, Bắc Ninh</li>
+               
                 <li>Sinh viên năm nhấ-hai Đại học Công nghệ -DHQGHN </li>
             </ul>
         
@@ -49,6 +49,12 @@
     <h3>Sơ lược </h3>
     <div id="main">
         <table>
+            <tr>
+                <th><img src="https://png.pngtree.com/png-vector/20190616/ourlarge/pngtree-characterfeatureshumanmodelperson--business-flat-line-fi-png-image_1487088.jpg" class="image-up" > </th>
+                <th><img src="https://png.pngtree.com/png-vector/20190616/ourlarge/pngtree-characterfeatureshumanmodelperson--business-flat-line-fi-png-image_1487088.jpg" class="image-up" > </th>
+                <th><img src="https://png.pngtree.com/png-vector/20190616/ourlarge/pngtree-characterfeatureshumanmodelperson--business-flat-line-fi-png-image_1487088.jpg" class="image-up" > </th>
+
+            </tr>
             <tr>
                 <th>Tính cách</th>
                 <th>Sở thích</th>
@@ -123,14 +129,10 @@
         <h3>Mạng xã hội</h3>
             
                 <a href="https://www.facebook.com/profile.php?id=100050895993355">
-                    <div class="image-container">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Facebook_logo_36x36.svg/2048px-Facebook_logo_36x36.svg.png"  style=" height: 150px; border-radius: 30px; margin: 30px">
-                    </div>
                 </a>
                 <a href="https://www.youtube.com/channel/UCMr8Uljs-SdHCmqW5A9Emrg">
-                    <div class="image-container">
                     <img src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Symbol.png" style=" height: 150px; border-radius: 30px; margin: 30px">
-                    </div>
                 </a>
         
             
@@ -178,6 +180,24 @@ document.addEventListener('mousemove', (event) => {
     }
 });
 
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = document.querySelectorAll('.lazy-image');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        lazyImages.forEach(image => {
+            observer.observe(image);
+        });
+    });
 </script>
 
 
