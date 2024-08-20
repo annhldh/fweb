@@ -21,26 +21,33 @@ h1
 
 }
 table{
-    width: 60%;
+    width: 90%;
 }
 th,label
 {
-    text-align: left;
+    
     font-family: 'Montserrat';
+}
+th{
+    text-align: center;
 }
 td
 {
+    text-align: center;
     width: auto;
     font-family: 'Montserrat';
+    font-size: medium;
 }
-
+tr{
+    font-size:x-large;
+}
 h3{
 
     border-left-style:solid;
     padding-left: 20px;
-    background-color: rgba(70, 202, 195,0.5);
     background-size:cover;
     margin-left: 30px;
+    font-size: xx-large;
 }
 li{
     font-family: 'Montserrat';
@@ -142,13 +149,14 @@ textarea {
     border-top-right-radius: 20px; /* Bo góc trên bên phải */
     border-bottom-right-radius: 20px; /* Bo góc dưới bên phải */
     overflow-x: hidden;
-    transform: translateX(-160px); /* Ẩn sidebar */
+    transform: translateX(0px); /* Ẩn sidebar */
     transition: transform 0.3s ease;
 }   
 
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    margin-left: 0;
 }
 
 .sidebar ul li {
@@ -156,6 +164,7 @@ textarea {
     border-bottom: 1px solid #444; /* Thêm viền phía dưới */
     padding-bottom: 10px; /* Tạo khoảng cách giữa nội dung và viền */
     font-size:smaller;
+    margin-left:0;
 }
 
 .sidebar ul li:last-child {
@@ -163,6 +172,7 @@ textarea {
 }
 .sidebar ul li a {
     text-decoration: none;
+
     color: #000;
 }
 .sidebar.show {
@@ -213,12 +223,12 @@ textarea {
 
 .image-up {
     opacity: 0;
-    
+    justify-content: center;
     position: relative;
     overflow: hidden;
     transform: translateY(50px); /* Đẩy ảnh xuống dưới 50px */
     transition: opacity 1s ease, transform 1s ease; /* Hiệu ứng mờ dần và di chuyển */
-    max-height: 70px;
+    max-height: 200px;
 }
 
 .image-up.visible {
