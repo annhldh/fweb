@@ -130,28 +130,35 @@ p{
 
     width: 150px;
     height: 500px;
-    background-color: #945353;
+    box-shadow: 0px 0px 15px 5px rgb(236, 9, 194),
+            inset 0px 0px 15px 5px rgb(236, 9, 194);
+      
+    border : solid rgb(232, 136, 214,0.9) 5px;
     padding: 10px;
     z-index: 1000;
     border-top-right-radius: 20px; /* Bo góc trên bên phải */
     border-bottom-right-radius: 20px; /* Bo góc dưới bên phải */
     overflow-x: hidden;
-    transform: translateX(-160px); /* Ẩn sidebar */
+    transform: translateX(-40px); /* Ẩn sidebar */
     transition: transform 0.3s ease;
+    text-align: right;
 }   
 
 .sidebar ul {
     list-style-type: none;
-    padding: 0;
-    margin-left: 0;
+    padding-right: 20px;
+    padding-left: 0;;
+    margin-left: 0
 }
 
 .sidebar ul li {
     margin-bottom: 15px;
     border-bottom: 1px solid #444; /* Thêm viền phía dưới */
     padding-bottom: 10px; /* Tạo khoảng cách giữa nội dung và viền */
-    font-size:smaller;
+    font-size:larger;
+    font-family:Arial, Helvetica, sans-serif;
     margin-left:0;
+
 }
 
 .sidebar ul li:last-child {
@@ -160,7 +167,7 @@ p{
 .sidebar ul li a {
     text-decoration: none;
 
-    color: #000;
+    color: antiquewhite;
 }
 .sidebar.show {
     transform: translateX(0); /* Hiện sidebar */
@@ -230,8 +237,10 @@ form {
     margin: 0 auto; 
     padding: 20px;
     border-radius: 30px;
-    box-shadow: 0px 0px 15px 5px rgb(236, 9, 194);
-    border : solid rgb(236, 9, 194) 5px;
+    box-shadow: 0px 0px 15px 5px rgb(236, 9, 194),
+            inset 0px 0px 15px 5px rgb(236, 9, 194);
+      
+    border : solid rgb(232, 136, 214,0.9) 5px;
     width: 70%;
     
 }
