@@ -139,7 +139,7 @@ p{
     border-top-right-radius: 20px; /* Bo góc trên bên phải */
     border-bottom-right-radius: 20px; /* Bo góc dưới bên phải */
     overflow-x: hidden;
-    transform: translateX(-40px); /* Ẩn sidebar */
+    transform: translateX(-160px); /* Ẩn sidebar */
     transition: transform 0.3s ease;
     text-align: right;
 }   
@@ -170,7 +170,7 @@ p{
     color: antiquewhite;
 }
 .sidebar.show {
-    transform: translateX(0); /* Hiện sidebar */
+    transform: translateX(-40); /* Hiện sidebar */
 }
 
 
