@@ -170,7 +170,7 @@ p{
     color: antiquewhite;
 }
 .sidebar.show {
-    transform: translateX(-40); /* Hiện sidebar */
+    transform: translateX(-40px); /* Hiện sidebar */
 }
 
 
