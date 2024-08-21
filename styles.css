@@ -221,7 +221,7 @@ p{
     position: relative;
     overflow: hidden;
     transform: translateY(50px); /* Đẩy ảnh xuống dưới 50px */
-    transition: opacity 1s ease, transform 1s ease; /* Hiệu ứng mờ dần và di chuyển */
+    transition: opacity 2s ease, transform 2s ease; /* Hiệu ứng mờ dần và di chuyển */
     max-height: 200px;
 }
 
