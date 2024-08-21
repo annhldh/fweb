@@ -220,8 +220,8 @@ p{
     justify-content: center;
     position: relative;
     overflow: hidden;
-    transform: translateY(50px); /* Đẩy ảnh xuống dưới 50px */
-    transition: opacity 2s ease, transform 2s ease; /* Hiệu ứng mờ dần và di chuyển */
+    transform: translateY(150px); /* Đẩy ảnh xuống dưới 50px */
+    transition: opacity 1.5s ease, transform 1.5s ease; /* Hiệu ứng mờ dần và di chuyển */
     max-height: 200px;
 }
 
